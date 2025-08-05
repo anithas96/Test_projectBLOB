@@ -37,56 +37,8 @@
 							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false,
-					"translator": {
-						"type": "TabularTranslator",
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
-					}
-				},
-				"inputs": [
-					{
-						"referenceName": "Parameter_dataset",
-						"type": "DatasetReference",
-						"parameters": {
-							"ds_project": {
-								"value": "@pipeline().parameters.pp_project_folder",
-								"type": "Expression"
-							},
-							"ds_folder": {
-								"value": "@pipeline().parameters.pp_input_folder",
-								"type": "Expression"
-							},
-							"ds_filename": {
-								"value": "@pipeline().parameters.pp_filename",
-								"type": "Expression"
-							}
-						}
-					}
-				],
-				"outputs": [
-					{
-						"referenceName": "Parameter_dataset",
-						"type": "DatasetReference",
-						"parameters": {
-							"ds_project": {
-								"value": "@pipeline().parameters.pp_project_folder",
-								"type": "Expression"
-							},
-							"ds_folder": {
-								"value": "@pipeline().parameters.pp_output_folder",
-								"type": "Expression"
-							},
-							"ds_filename": {
-								"value": "@pipeline().parameters.pp_filename",
-								"type": "Expression"
-							}
-						}
-					}
-				]
+					"enableStaging": false
+				}
 			},
 			{
 				"name": "Copy data2",
@@ -130,56 +82,8 @@
 							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false,
-					"translator": {
-						"type": "TabularTranslator",
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
-					}
-				},
-				"inputs": [
-					{
-						"referenceName": "Parameter_dataset",
-						"type": "DatasetReference",
-						"parameters": {
-							"ds_project": {
-								"value": "@pipeline().parameters.pp_project_folder",
-								"type": "Expression"
-							},
-							"ds_folder": {
-								"value": "@pipeline().parameters.pp_output_folder",
-								"type": "Expression"
-							},
-							"ds_filename": {
-								"value": "@pipeline().parameters.pp_filename",
-								"type": "Expression"
-							}
-						}
-					}
-				],
-				"outputs": [
-					{
-						"referenceName": "Parameter_dataset",
-						"type": "DatasetReference",
-						"parameters": {
-							"ds_project": {
-								"value": "@pipeline().parameters.pp_project_folder",
-								"type": "Expression"
-							},
-							"ds_folder": {
-								"value": "@pipeline().parameters.pp_archive",
-								"type": "Expression"
-							},
-							"ds_filename": {
-								"value": "@pipeline().parameters.pp_filename",
-								"type": "Expression"
-							}
-						}
-					}
-				]
+					"enableStaging": false
+				}
 			},
 			{
 				"name": "Delete1",
@@ -201,30 +105,6 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"dataset": {
-						"referenceName": "Parameter_dataset",
-						"type": "DatasetReference",
-						"parameters": {
-							"ds_project": {
-								"value": "@pipeline().parameters.pp_project_folder",
-								"type": "Expression"
-							},
-							"ds_folder": {
-								"value": "@pipeline().parameters.pp_output_folder",
-								"type": "Expression"
-							},
-							"ds_filename": {
-								"value": "@pipeline().parameters.pp_filename",
-								"type": "Expression"
-							}
-						}
-					},
-					"logStorageSettings": {
-						"linkedServiceName": {
-							"referenceName": "AzureDataLakeStorage1",
-							"type": "LinkedServiceReference"
-						}
-					},
 					"enableLogging": true,
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
@@ -250,6 +130,9 @@
 			"pp_archive": {
 				"type": "string"
 			}
+		},
+		"folder": {
+			"name": "New folder"
 		},
 		"annotations": []
 	}
