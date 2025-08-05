@@ -1,0 +1,9 @@
+{
+	"name": "ADFblobAN",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a83a261a-0cce-4d44-88fd-3dfc68b3afee",
+		"tenantId": "0eed0e28-d563-4664-8a84-ad98a5ec4021"
+	}
+}
